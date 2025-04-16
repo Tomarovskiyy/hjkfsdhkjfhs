@@ -1,0 +1,148 @@
+:root {
+    --text-color: #222222;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+} 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #6bdae9, #f374e8);
+}
+.photo {
+    content-visibility: auto;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    background: black;
+}
+.photo > img {
+    width: 150px;
+}
+h1 {
+    color: var(--text-color);
+}
+
+/* ---------------- MAIN ---------------- */
+main {
+    flex-grow: 1;
+    padding: 5% 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    background: #313131;
+    color: #cfcece;
+}
+h2 {
+    text-align: center;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    display: flex;
+    gap: 20px;
+    padding: 5% 10%;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(212, 208, 208);
+    background: black;
+}
+.content {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+.content > .text {
+    font-size: 22px;
+}
+.content > .text > p {
+    font-size: 11px;
+    opacity: 50%;
+}
+textarea {
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #6bdae9, #f374e8) 1;
+    color: #6bdae9;
+    padding: 10px;
+    resize: vertical;
+    outline: none;
+    transition: border 0.3s ease, color 0.3s ease;
+}
+button#smb {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(45deg, #6bdae9, #f374e8);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    width: 100%;
+  }
+  
+  button#smb:hover {
+    opacity: 0.8;
+  }
+
+/* Цвет плейсхолдера */
+textarea::placeholder {
+    color: #f374e8;
+    opacity: 0.6;
+}
+
+/* При фокусе */
+textarea:focus {
+    border-image: linear-gradient(45deg, #f374e8, #6bdae9) 1;
+    color: #f374e8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* ---------------- MEDIA ---------------- */
+@media (max-width: 600px) {
+    .content > .text {
+        font-size: 12px;
+    }
+    .content > .text > p {
+        font-size: 9px;
+        opacity: 50%;
+    }
+    .contacts {
+        font-size: 12px;
+    }
+    .photo > img {
+        width: 60px;
+    }
+    h1 {
+        font-size: 15px;
+    }
+}
